@@ -1,6 +1,6 @@
 # coding: utf-8
 from django.db import models
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import ugettext_lazy as _
 
 class Subscription(models.Model):
     name = models.CharField(_('Nome'), max_length=100)
@@ -11,8 +11,8 @@ class Subscription(models.Model):
     
     class Meta:
         ordering = ['created_at']
-        verbose_name = _('Inscrição')
-        verbose_name_plural = _('Inscrições')
+        verbose_name = _(u'Inscricão')
+        verbose_name_plural = _(u'Inscricões')
         
     def __unicode__(self):
         return self.name
