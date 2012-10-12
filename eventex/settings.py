@@ -1,4 +1,10 @@
+# coding: utf-8
 # Django settings for eventex project.
+
+# Usar o South para preparar o banco nos testes?
+# True: Sim. (default)
+# False: Nao! Use o Syncdb
+SOUTH_TESTS_MIGRATE = False
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -121,6 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    'south',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'eventex.core',
